@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #FF6B1A;
+  --secondary-color: #333;
+  --background-color: #F5F5F5;
+  --context-text-color: #666666;
+  --links-color: rgb(255, 255, 255);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: inter;
+  font-family: 'inter', sans-serif;
+  
+}
+
+
+.header {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+  background-color:var(--primary-color);
+  color: white;
+  height: 130px;
+}
+
+.header-title {
+  display: flex;
+  align-items: baseline; 
+  gap: 10px;             
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--secondary-color);
+  color: var(--links-color);
+  height: 70px;
+}
+
+.hamburger {
+  display: block; 
+}
+
+
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  height: 37px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+.menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+#menu-toggle:checked ~ .menu {
+  max-height: 300px;
+}
+
+
+
+
+.menu li {
+  width: 100px;
+  list-style: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.menu li:hover {
+  background-color: var(--primary-color);
+}
+
+.menu li a {
+  color: var(--links-color);
+  text-decoration: none;
+  display: block;
+}
+
+
+
+
+section{
+
+    height: 377px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #2A2A2AE5;
+    color: white;
+    text-align: center;
+    background-image: url('data:image/svg+xml, <svg width="151"  viewBox="0 0 317 269" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M230.599 134.014C236.041 136.548 242.298 139.715 240.394 157.362C234.68 172.837 223.797 186.05 196.318 185.054C174.28 179.715 150.338 173.471 152.242 129.67C154.147 107.046 177.817 75.6439 218.084 75.3724C276.307 76.1869 304.875 127.498 302.426 167.136C299.433 223.606 254.179 252.927 191.965 258.356C158.591 258.356 119.866 240.167 102.181 212.746C80.1433 184.24 71.6184 125.507 90.21 86.775C109.89 45.3276 147.021 19.2412 190.877 18.3596C231.597 17.5451 258.351 32.839 273.587 42.2507L309.5 7.50001" stroke="%23568D0F" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M97.828 73.2005C76.286 106.701 61.8696 150.322 47.2226 176.909C36.7024 199.715 22.3733 212.746 7.50006 230.121C66.5608 264.297 157.578 267.054 216.723 254.827" stroke="%23568D0F" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+   /*  filter: blur(1px); */
+ 
+  }
+
+
+  .main{
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+
+
+  }
+   .card-box{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  } 
+
+
+  .cards {
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: start;
+  }
+  .cards{
+   border-top: 4px solid var(--primary-color);
+     
+  }
+
+  .card-title {
+    padding: 10px;
+    display: flex;
+ 
+    font-size: 24px;
+    gap: 5px;
+  }
+
+  .card-title img {
+    width: 24px;
+    height: 24px;
+   
+  }
+  .cards p {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--context-text-color);
+  }
+
+.footer {
+  
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: white;
+ 
+  
+}
+
+ 
+
+@media screen and (min-width: 769px) {
+ 
+.nav{
+  display: flex;
+  justify-content: center;
+  
+ 
+}
+
+.hamburger {
+    display: none;
+  }
+
+
+
+  .menu {
+    display: flex;
+    justify-content: center;
+   text-align: center;
+    position: static;
+    width: auto;
+    gap: 10px;
+    max-height: none;
+    overflow: visible;
+    background-color: transparent;
+
+  }
+
+   .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    
+   justify-content: center;
+
+      
+  }
+  .card-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+   
+  }
+
+
+
+}
